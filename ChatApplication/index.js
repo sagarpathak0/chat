@@ -13,8 +13,6 @@ const io = socketIO(server, {
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
-
 const users = new Map();
 
 const chatHistory = new Map();
