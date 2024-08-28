@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-      origin: "http://localhost:3001",
+      origin: "https://chat-seven-theta.vercel.app/",
       methods: ["GET", "POST"]
     }
   });

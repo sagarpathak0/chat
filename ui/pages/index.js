@@ -14,7 +14,7 @@ export default function Chat() {
   const [roomJoined, setRoomJoined] = useState(false);
 
   useEffect(() => {
-    socket = io('http://localhost:3000');
+    socket = io('https://chat-api-ruddy.vercel.app/');
 
     socket.on('loginError', (errorMessage) => {
       alert(errorMessage);
