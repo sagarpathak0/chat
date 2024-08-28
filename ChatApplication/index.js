@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-      origin: ["https://chat-seven-theta.vercel.app/", "http://localhost:3000"],
+      origin: ["https://chat-seven-theta.vercel.app", "http://localhost:3000"],
       methods: ["GET", "POST"]
     }
   });
@@ -23,7 +23,7 @@ app.get('/', (req,res)=>{
 
 app.use(
     cors({
-      origin: ["*", "http://localhost:3000", "https://chat-seven-theta.vercel.app/"],
+      origin: ["*", "http://localhost:3000", "https://chat-seven-theta.vercel.app"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       allowedHeaders: ["Content-Type", "Authorization"],
     })
