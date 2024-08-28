@@ -6,17 +6,20 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-      origin: "https://chat-seven-theta.vercel.app/",
+      origin: ["https://chat-seven-theta.vercel.app/", "http://localhost:3000"],
       methods: ["GET", "POST"]
     }
   });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const users = new Map();
 
 const chatHistory = new Map();
 
+app.get('/', (req,res)=>{
+    res.send({message: "welcome this is test page"});
+})
 
 app.use(
     cors({

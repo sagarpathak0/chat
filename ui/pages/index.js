@@ -12,7 +12,7 @@ export default function Chat() {
   const [typingStatus, setTypingStatus] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
   const [roomJoined, setRoomJoined] = useState(false);
-
+//[,'https://chat-api-ruddy.vercel.app/',]
   useEffect(() => {
     socket = io('https://chat-api-ruddy.vercel.app/');
 
