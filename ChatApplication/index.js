@@ -19,6 +19,16 @@ const users = new Map();
 
 const chatHistory = new Map();
 
+
+app.use(
+    cors({
+      origin: ["*", "http://localhost:3000", "https://chat-seven-theta.vercel.app/"],
+      methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+    })
+  );
+
+
 io.on('connection',(socket) => {
     let username = '';
     let currentRoom = '';
